@@ -24,9 +24,9 @@ func (e Empire) Attack() {
 
 func main() {
 	var attacker IAttack
-	attacker = Warrior{Name: "Conan"}
+	attacker = &Warrior{Name: "Conan"}
 	attacker.Attack()
 
-	attacker = Empire{Name: "Roman Empire"}
+	attacker = &Empire{Name: "Roman Empire"}
 	attacker.Attack()
 }
