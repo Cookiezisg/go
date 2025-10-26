@@ -28,6 +28,7 @@ func sayhelloName(res http.ResponseWriter, req *http.Request) {
 
 func login(res http.ResponseWriter, req *http.Request) {
 	fmt.Println("method:", req.Method) //获取请求的方法
+	fmt.Println("我这里路由了login")
 
 	req.ParseForm()
 	if req.Method == "GET" {
@@ -38,6 +39,8 @@ func login(res http.ResponseWriter, req *http.Request) {
 		fmt.Println("username:", req.Form["username"])
 		fmt.Println("password:", req.Form["password"])
 	}
+
+	fmt.Println("我这里login路由结束啦")
 }
 
 func main() {
